@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Gowun+Batang&family=Gowun+Dodum&family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gowun Dodum", sans-serif;
+    
+}
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* img 삽입 후 hover가 안 돼서 이걸 넣음 뭐지 */
+    z-index: 10000;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    /* transparent 하니까 뭔가 그라데이션이 되었다 */
+    /* background: linear-gradient(to top, #1c0522, transparent); */
+    z-index: 1000;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    pointer-events: none;
+}
+
+
+header #menu_bar {
+    position: absolute;
+    position: fixed;
+    width: 3vw;
+    top: 2vw;
+    left: 93vw;
+    z-index: 200;
+    transition: .4s ease;
+}
+#menu_bar:hover {
+    opacity: 0.5;
+}
+#menu_box {
+    position: fixed;
+    background: #10102A;
+    color: #fff;
+    width: 30vw;
+    height: 45vw;
+    left: 69vw;
+    transition: 1s ease;
+    z-index: 100;
+    font-size: 1.3vw;
+    text-align: center;
+    padding: 10vw;
+    border-radius: 2vw;
+    opacity: 0;
+    display: none;
+    z-index: 190;
+}
+#menu_box ul {
+    list-style: none;
+}
+#menu_box li {
+    transition: .4s ease;
+    margin-bottom: 2vw;
+}
+#menu_box li:hover {
+    color: #7174bc;
+}
+
+#menu_box.show {
+    opacity: 0.7;
+    display: block;
+}
+/* 
+SECTION1================================================================== */
+#sec1 {
+    position: relative;
+    height: 50vw;
+    background: linear-gradient(#10102A, #10102A, #10102A, #1e0e57);
+}
+#stars {
+    position: absolute;
+    height: 40vw;
+}
+#moon {
+    transition: opacity 2s ease;
+}
+#moto {
+    position: absolute;
+    font-size: 1.4vw;
+    color: #fff;
+    opacity: .8;
+    top: 15vw;
+    left: 10.5vw;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+#project {
+    position: absolute;
+    width: 110vw;
+    top: 19vw;
+    left: 0;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+#scroll {
+    position: absolute;
+    top: 41vw;
+    animation: scroll 3s ease-in-out infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+#top_btn {
+    position: fixed;
+    width: 5vw;
+    top: 40vw;
+    left: 90vw;
+    z-index: 210;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+/* 
+SECTION2 ================================================================== */
+#sec2 {
+    position: relative;
+    height: 92vw;
+    background: linear-gradient(#1e0e57, #4A2cb5, #4A2cb5);
+}
+.building {
+    position: absolute;
+    top: 40vw;
+    transition: 2s ease;
+}
+#cloud {
+    position: absolute;
+    top: 13vw;
+    left: 40vw;
+}
+#logo_img {
+    position: absolute;
+    width: 4vw;
+    top: 16vw;
+    left: 64vw;
+    opacity: 0;
+    transition: 2s ease;
+}
+#paper_plane {
+    position: absolute;
+    width: 15vw;
+    left: 90vw;
+    /* top: 30vw; */
+    transition: 4s ease;
+}
+#sec2 h1 {
+    position: absolute;
+    color: #fff;
+    font-size: 4vw;
+    top: 15vw;
+    left: 70vw;
+    opacity: 0;
+    transition: 2s ease;
+}
+#sec2 p {
+    position: absolute;
+    color: #fff;
+    font-size: 2vw;
+    top: 22vw;
+    left: 62vw;
+    opacity: 0;
+    transition: 1s ease;
+}
+#sec2 h6 {
+    position: absolute;
+    color: #fff;
+    font-size: 1vw;
+    left: 72.5vw;
+    opacity: 0;
+    transition: 1s ease;
+}
+#sec2 h6#name1 {
+    top: 39vw;
+}
+#sec2 h6#name2 {
+    top: 41vw;
+}
+#sec2 h6#name3 {
+    left: 71.6vw;
+    top: 43vw;
+}
+
+
+/* 
+SECTION3 ================================================================== */
+#sec3 {
+    position: relative;
+    height: 160vw;
+    background: linear-gradient(#151240, #151240, #151240, #432DB2, #BC90D3, #BC90D3, #ffffff);
+}
+#stars2 {
+    position: absolute;
+    top: 40vw;
+}
+#aurora2 {
+    position: absolute;
+    top: 40vw;
+}
+#line2 {
+    position: absolute;
+    top: 20vw;
+}
+#shooting_star {
+    position: absolute;
+    top: 30vw;
+}
+#subway_building {
+    position: absolute;
+    top: 60vw;
+}
+#bridge {
+    position: absolute;
+    top: 100vw;
+    z-index: 1;
+}
+#subway {
+    position: absolute;
+    top: 90vw;
+    left: 40vw;
+}
+#text1, #text2 {
+    position: absolute;
+    color: #fff;
+    z-index: 2;
+    left: 9vw;
+}
+#text1 {
+    font-size: 1.4vw;
+    top: 52vw;
+    left: -10vw;
+    opacity: 0;
+    transition: 2.5s ease;
+}
+#text2 {
+    font-size: 1.7vw;
+    top: 55vw;
+    border-bottom: solid 1px #fff;
+    left: -10vw;
+    opacity: 0;
+    transition: 2.5s ease;
+}
+#text2 span{
+    background: #9e48d8
+}
+
+
+@keyframes subway {
+    from {
+        left: 100vw;
+        opacity: 0;
+    }
+    to {
+        left: -100vw;
+        opacity: 1;
+    }
+}
+
+
+/* 
+WAVE ================================================================== */
+#wave_div {
+    position: relative;
+    bottom: 30vw;
+}
+#wave_bottom {
+    position: relative;
+    bottom: 30vw;
+    width: 100%;
+    height: 50vw;
+    background: #4872D8;
+}
+
+
+
+/* 
+SECTION4 ============================================================== */
+#sec4 {
+    height: 180vw;
+    background: linear-gradient(#4872D8, #b4cdff, #b4cdff, transparent);
+    position: relative;
+    top: -30vw;
+}
+#Q {
+    position: absolute;
+    width: 60vw;
+    top: 1vw;
+    left: -35vw;
+    transition: 2.5s ease
+}
+#background_grid1 {
+    position: absolute;
+    top: 25vw;
+}
+#back_line1 {
+    position: absolute;
+    top: 45vw;
+}
+#subway_in1 {
+    position: absolute;
+    width: 85vw;
+    top: 35vw;
+}
+#person1 {
+    position: absolute;
+    width: 35vw;
+    top: 25.2vw;
+}
+#subway_in2 {
+    position: absolute;
+    width: 85vw;
+    top: 75vw;
+    left: 15vw;
+}
+#person2 {
+    position: absolute;
+    width: 35vw;
+    top: 65.3vw;
+    left: 65vw;
+}
+#subway_in3 {
+    position: absolute;
+    width: 85vw;
+    top: 116vw;
+}
+#person3 {
+    position: absolute;
+    width: 35vw;
+    top: 106vw;
+}
+#sec4 h2, p {
+    opacity: 0;
+    transition: 1s ease;
+}
+#sec4 h2.person1 {
+    position: absolute;
+    font-size: 2vw;
+    color: #fff;
+    top: 46.5vw;
+    left: 50.5vw;
+}
+#sec4 p.person1 {
+    position: absolute;
+    font-size: 1.4vw;
+    color: #4A2cb5;
+    top: 51vw;
+    left: 55vw;
+}
+#sec4 h2.person2 {
+    position: absolute;
+    font-size: 2vw;
+    color: #fff;
+    top: 85.7vw;
+    left: 23.5vw;
+}
+#sec4 p.person2 {
+    position: absolute;
+    font-size: 1.4vw;
+    color: #4A2cb5;
+    top: 90.5vw;
+    left: 40vw;
+    text-align: right;
+}
+#sec4 h2.person3 {
+    position: absolute;
+    font-size: 2vw;
+    color: #fff;
+    top: 125.5vw;
+    left: 50vw;
+}
+#sec4 p.person3 {
+    position: absolute;
+    font-size: 1.4vw;
+    color: #4A2cb5;
+    top: 130vw;
+    left: 55vw;
+}
+#back_line2 {
+    position: absolute;
+    top: 160vw;
+}
+
+
+/* 
+SECTION5===================================================== */
+#sec5 {
+    position: relative;
+    height: 53vw;
+    top: -30vw;
+}
+#door_left{
+    position: absolute;
+    width: 13vw;
+    top: 9vw;
+    left: 37vw;
+    transition: 1s ease;
+}
+#door_right{
+    position: absolute;
+    width: 13vw;
+    top: 9vw;
+    left: 49vw;
+    transition: 1s ease;
+}
+#sec5 h1 {
+    position: absolute;
+    text-align: center;
+    font-size: 3.5vw;
+    color: #2652b6;
+    top: 18vw;
+    opacity: 0;
+    transition: 1s ease;
+}
+#sec5 h5 {
+    position: absolute;
+    font-size: 1.5vw;
+    color: #2652b6;
+    top: 29vw;
+    opacity: 0;
+    transition: 1s ease;
+}
+
+/* 
+SECTION6==============================================*/
+#sec6 {
+    position: relative;
+    height: 150vw;
+    top: -30vw;
+    background: linear-gradient(#88ADFF, #b4cdff, transparent);
+}
+#sec6::before {
+    background: #393b6c;
+    z-index: 0;
+}
+#window_frame{
+    position: absolute;
+    top: 16vw;
+}
+#background_grid2 {
+    position: absolute;
+    top: 20vw;
+}
+#person {
+    position: absolute;
+    top: 44vw;
+}
+#subway_in {
+    position: absolute;
+    top: 10vw;
+}
+#sma_video {
+    position: absolute;
+    width: 26vw;
+    left: 11.6vw;
+    top: 18.8vW;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 15px;
+}
+#black_box {
+    position: absolute;
+    width: 25vw;
+    height: 40.9vw;
+    left: 12vw;
+    top: 18.8vW;
+    background: black;
+    border-radius: 15px;
+}
+
+#left_btn {
+    position: absolute;
+    top: 38vw;
+    left: 3vw;
+    width: 0;
+    height: 0;
+    border-bottom: 2vw solid transparent;
+    border-top: 2vw solid transparent;
+    border-left: 3vw solid transparent;
+    border-right: 3vw solid white;
+    transition: .4s ease;
+}
+#right_btn {
+    top: 38vw;
+    left: 40.6vw;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 2vw solid transparent;
+    border-top: 2vw solid transparent;
+    border-left: 3vw solid white;
+    border-right: 3vw solid transparent;
+    transition: .4s ease;
+}
+#left_btn:hover {
+    border-right: 3vw solid #747ac1;
+}
+#right_btn:hover {
+    border-left: 3vw solid #747ac1;
+}
+#sec6 .color_box {
+    position: absolute;
+    background: #393b6c;
+    width: 100%;
+    height: 70vw;
+    left: 0;
+    top: 85vw;
+}
+/* 
+SECTION7=========================================== */
+#sec7 {
+    position: relative;
+    height: 60vw;
+    background: #393b6c;
+    top: -30vw;
+}
+#sec7 .video {
+    position: absolute;
+    width: 71.1vw;
+    height: 40vw;
+    z-index: 100;
+}
+
+
+/* 
+SETION*=============================================== */
+#sec8 {
+    position: relative;
+    height: 60vw;
+}
+
+#sec8 h2, #sec8 p {
+    position: absolute;
+}
+#sec8 h2 {
+    position: absolute;
+    text-align: center;
+    font-size: 2.5vw;
+    color: #747ac1;
+    transition: 1s ease;
+    top: 37vw;
+    left: 55vw;
+}
+#sec8 h4 {
+    position: absolute;
+    text-align: center;
+    font-size: 1vw;
+    color: #7174bc;
+    transition: 1s ease;
+    text-align: left;
+    top: 33vw;
+    left: 55vw;
+}
+
+
+/* 
+FOOTER ==================================================== */
+footer {
+    position: relative;
+    width: 100%;
+    height: 60vw;
+    background: #e0e5fc;
+}
+#footer {
+    position: absolute;
+    width: 100%;
+    top: 20vw;
+}
+#footer_subway {
+    position: absolute;
+    width: 50vw;
+    top: 35vw;
+    animation: subway_move 12s ease infinite;
+}
+@keyframes subway_move {
+    from {
+
+        left: 120vw;
+    }
+    to {
+
+        left: -50vw;
+    }
+}
